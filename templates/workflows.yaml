@@ -7,10 +7,10 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: argocd
+    namespace: workflows
     server: {{ .Values.spec.destination.server }}
   project: default
   source:
     path: workflows
-    repoURL: https://github.com/jwindhaber/argo-workflows.git
+    repoURL: https://github.com/jwindhaber/argo-workflows
     targetRevision: HEAD
